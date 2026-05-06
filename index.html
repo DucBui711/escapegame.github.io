@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room 🔐</title>
+  <link rel="stylesheet" href="escape-game.css" />
+</head>
+<body>
+  <div id="room" class="room dark">
+    <h1>Escape Room</h1>
+    <p id="message-display" class="message-display">Tu es enfermé dans une pièce sombre... Trouve comment sortir !</p>
+
+    <div class="room-grid">
+
+      <button id="lamp" class="object lamp off">
+        <span class="object-emoji">💡</span>
+        <span class="object-label">Lampe</span>
+      </button>
+
+      <button id="rug" class="object rug dark">
+        <span class="object-emoji">🟫</span>
+        <span class="object-label">Tapis</span>
+      </button>
+
+      <button id="painting" class="object painting dark">
+        <span class="object-emoji">🖼️</span>
+        <span class="object-label">Tableau</span>
+        <span id="object-hint" class="object-hint" hidden>L'année où la Tour Eiffel fut frappée par la foudre</span>
+      </button>
+
+      <button id="chest" class="object chest dark">
+        <span class="object-emoji">📦</span>
+        <span class="object-label">Coffre</span>
+      </button>
+
+      <button id="door" class="object door dark">
+        <span class="object-emoji">🚪</span>
+        <span class="object-label">Porte</span>
+      </button>
+
+    </div>
+
+    <div id="code-section" class="code-section hidden" >
+      <label for="code-input">Entrer le code :</label>
+      <input type="text" inputmode="numeric" id="code-input" maxlength="4" placeholder="????">
+      <button id="code-btn" hidden>💳 Valider</button>
+    </div>
+
+    <div class="inventory">
+      Inventaire : <span id="inventory-display">vide</span>
+    </div>
+  </div>
+
+  <script src="EscapeGame.js"></script>
+</body>
+</html>
